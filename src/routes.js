@@ -7,10 +7,11 @@ import Register from './pages/Register';
 import Initial from './pages/Initial';
 import Main from './pages/Main';
 
+import {SENSITIVE} from '../sensitive';
 const Stack = createStackNavigator();
 
 GoogleSignin.configure({
-  webClientId: process.env.FIREBASE_WEBCLIENTID,
+  webClientId: SENSITIVE.firebase_webId,
 });
 
 export default function Routes() {

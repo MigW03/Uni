@@ -60,3 +60,4 @@ buck-out/
 
 
 .env
+sensitive.js
