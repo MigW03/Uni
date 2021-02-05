@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "701681103075",
+    "project_id": "uni---organizatio-app",
+    "storage_bucket": "uni---organizatio-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701681103075:android:0368b6a2c84eb6ba95d5d6",
+        "android_client_info": {
+          "package_name": "com.mobileuni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701681103075-gb11pj7d6f775l0e95k67i6ehcsf1enf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobileuni",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "701681103075-673or93vgh4spnnr1jf4fe6tilgp88rj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_q5rAdo-mnKVS6Ji4Im_vZstxvkGchQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701681103075-673or93vgh4spnnr1jf4fe6tilgp88rj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
