@@ -7,21 +7,23 @@ import {
   Alert,
   StatusBar,
 } from 'react-native';
-import auth from '@react-native-firebase/auth';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-export default function Main() {
-  function logout() {
-    auth()
-      .signOut()
-      .then(() => console.log('usuário saiu'));
-  }
+import TabRoutes from '../tabRoutes';
 
+export default function Main({navigation}) {
   return (
     <View style={styles.container}>
-      <Text>Main</Text>
-      <TouchableOpacity style={styles.touch} onPress={logout}>
-        <Text style={styles.touchText}>Logout</Text>
-      </TouchableOpacity>
+      <StatusBar backgroundColor="#f1f1f1" barStyle="dark-content" />
+      <View style={styles.header}>
+        <Text style={styles.appName}>Uni</Text>
+        <TouchableOpacity
+          style={styles.settingsTouch}
+          onPress={() => navigation.navigate('Settings')}>
+          <MaterialIcons name="settings" size={40} color="#3473d1" />
+        </TouchableOpacity>
+      </View>
+      <TabRoutes />
     </View>
   );
 }
@@ -29,18 +31,20 @@ export default function Main() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f1f1f1',
   },
-  touch: {
-    padding: 6,
-    borderRadius: 8,
-    backgroundColor: '#ad270c',
-    marginTop: 12,
-  },
-  touchText: {
-    color: '#FFF',
+  appName: {
+    fontSize: 30,
     fontWeight: 'bold',
-    fontSize: 16,
+    color: '#3473d1',
+  },
+  header: {
+    height: '12%',
+    flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 12,
+    paddingHorizontal: 30,
   },
 });

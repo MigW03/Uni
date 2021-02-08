@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Initial from './pages/Initial';
 import Main from './pages/Main';
+import Settings from './pages/Settings';
 
 import {SENSITIVE} from '../sensitive';
 const Stack = createStackNavigator();
@@ -33,6 +34,11 @@ export default function Routes() {
         <Stack.Screen
           name="Main"
           component={Main}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Settings"
+          component={Settings}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
