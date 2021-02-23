@@ -8,6 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {Colors} from '../assets/Colors';
 
 import TabRoutes from '../tabRoutes';
 
@@ -20,7 +21,7 @@ export default function Main({navigation}) {
         <TouchableOpacity
           style={styles.settingsTouch}
           onPress={() => navigation.navigate('Settings')}>
-          <MaterialIcons name="settings" size={40} color="#3473d1" />
+          <MaterialIcons name="settings" size={40} color={Colors.light.blue} />
         </TouchableOpacity>
       </View>
       <TabRoutes />
@@ -31,12 +32,12 @@ export default function Main({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f1f1f1',
+    backgroundColor: Colors.light.background,
   },
   appName: {
     fontSize: 30,
     fontWeight: 'bold',
-    color: '#3473d1',
+    color: Colors.light.blue,
   },
   header: {
     height: '12%',

@@ -13,6 +13,7 @@ import {
   Modal,
 } from 'react-native';
 import {GoogleSignin} from '@react-native-community/google-signin';
+import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
 import GoogleIcon from 'react-native-vector-icons/AntDesign';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -95,7 +96,11 @@ export default function Register({navigation}) {
     try {
       const {idToken} = await GoogleSignin.signIn();
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-      return await auth().signInWithCredential(googleCredential);
+      return await auth()
+        .signInWithCredential(googleCredential)
+        .then(() => {
+          ToastAndroid.show('Usuário criado com sucesso', ToastAndroid.SHORT);
+        });
     } catch (error) {
       console.log({error});
     }

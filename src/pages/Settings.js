@@ -7,6 +7,7 @@ import {
   Alert,
   StatusBar,
 } from 'react-native';
+import {Colors} from '../assets/Colors';
 
 import auth from '@react-native-firebase/auth';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -30,6 +31,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
   },
 });

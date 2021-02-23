@@ -7,6 +7,7 @@ import {
   Alert,
   StatusBar,
 } from 'react-native';
+import {Colors} from '../assets/Colors';
 
 import Tab from './Tab';
 
@@ -49,7 +50,7 @@ export default function TabContainer({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: '#f1f1f1',
+    backgroundColor: Colors.light.background,
     alignItems: 'center',
     justifyContent: 'space-around',
   },

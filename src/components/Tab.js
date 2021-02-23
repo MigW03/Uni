@@ -8,6 +8,7 @@ import {
   Alert,
   StatusBar,
 } from 'react-native';
+import {Colors} from '../assets/Colors';
 
 export default function Tab(props) {
   const focus = props.focus;
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 6,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: '#3473d1',
+    borderColor: Colors.light.blue,
   },
   focusedTouch: {
     alignItems: 'center',
@@ -39,16 +40,16 @@ const styles = StyleSheet.create({
     padding: 8,
     paddingHorizontal: 12,
     borderRadius: 12,
-    backgroundColor: '#3473d1',
+    backgroundColor: Colors.light.blue,
   },
   focusedText: {
-    color: '#FFF',
+    color: Colors.white,
     fontWeight: 'bold',
     fontSize: 16,
   },
   touchText: {
     fontWeight: 'bold',
-    color: '#3473d1',
+    color: Colors.light.blue,
     fontSize: 15,
   },
 });

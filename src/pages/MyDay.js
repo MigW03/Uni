@@ -7,6 +7,7 @@ import {
   Alert,
   StatusBar,
 } from 'react-native';
+import {Colors} from '../assets/Colors';
 
 export default function MyDay() {
   return (
@@ -21,6 +22,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#f1f1f1',
+    backgroundColor: Colors.light.background,
   },
 });
