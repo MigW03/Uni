@@ -28,7 +28,6 @@ export default function Routes() {
   }, []);
 
   if (user) {
-    console.log(user.email);
     return (
       <Stack.Navigator>
         <Stack.Screen

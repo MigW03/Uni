@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   Text,
@@ -11,6 +11,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {Colors} from '../assets/Colors';
 
 import TabRoutes from '../tabRoutes';
+import WelcomeModal from '../components/WelcomeModal';
 
 export default function Main({navigation}) {
   return (
@@ -25,6 +26,7 @@ export default function Main({navigation}) {
         </TouchableOpacity>
       </View>
       <TabRoutes />
+      <WelcomeModal />
     </View>
   );
 }
