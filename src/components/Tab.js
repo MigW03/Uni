@@ -1,4 +1,3 @@
-import {useLinkProps} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {
   StyleSheet,
@@ -8,15 +7,15 @@ import {
   Alert,
   StatusBar,
 } from 'react-native';
-import {Colors} from '../assets/Colors';
+import {Colors} from '../assets/Colors.json';
+
+const theme = 'light';
 
 export default function Tab(props) {
   const focus = props.focus;
 
   return (
-    <TouchableOpacity
-      onPress={props.onPress}
-      style={focus ? styles.focusedTouch : styles.touch}>
+    <TouchableOpacity onPress={props.onPress}>
       <Text style={focus ? styles.focusedText : styles.touchText}>
         {props.title}
       </Text>
@@ -25,31 +24,14 @@ export default function Tab(props) {
 }
 
 const styles = StyleSheet.create({
-  touch: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 4,
-    paddingHorizontal: 6,
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: Colors.light.blue,
-  },
-  focusedTouch: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 8,
-    paddingHorizontal: 12,
-    borderRadius: 12,
-    backgroundColor: Colors.light.blue,
-  },
   focusedText: {
-    color: Colors.white,
+    color: Colors[theme].navText.active,
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 26,
   },
   touchText: {
     fontWeight: 'bold',
-    color: Colors.light.blue,
-    fontSize: 15,
+    color: Colors[theme].navText.inactive,
+    fontSize: 18,
   },
 });

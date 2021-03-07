@@ -11,6 +11,8 @@ import {Colors} from '../assets/Colors';
 
 import Tab from './Tab';
 
+const theme = 'light';
+
 export default function TabContainer({
   state,
   descriptors,
@@ -50,7 +52,7 @@ export default function TabContainer({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: Colors.light.background,
+    backgroundColor: Colors[theme].background,
     alignItems: 'center',
     justifyContent: 'space-around',
   },

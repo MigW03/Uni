@@ -7,7 +7,9 @@ import {
   Alert,
   StatusBar,
 } from 'react-native';
-import {Colors} from '../assets/Colors';
+import {Colors} from '../assets/Colors.json';
+
+const theme = 'light';
 
 export default function Todos() {
   return (
@@ -22,6 +24,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.light.background,
+    backgroundColor: Colors[theme].background,
   },
 });

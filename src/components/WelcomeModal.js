@@ -8,12 +8,14 @@ import {
   StatusBar,
   Modal,
 } from 'react-native';
-import {Colors} from '../assets/Colors';
+import {Colors} from '../assets/Colors.json';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
+
+const theme = 'light';
 
 export default function WelcomeModal() {
   const [userHasData, setUserHasData] = useState(true);
@@ -54,7 +56,7 @@ export default function WelcomeModal() {
         <View style={styles.modalContent}>
           <FontAwesome
             name="user"
-            color={Colors.light.blue}
+            color={Colors.blue}
             size={80}
             style={styles.icon}
           />
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginTop: -70,
-    backgroundColor: Colors.light.background,
+    backgroundColor: Colors[theme].background,
     borderRadius: 60,
     padding: 12,
     textAlign: 'center',
@@ -95,7 +97,7 @@ const styles = StyleSheet.create({
     width: '90%',
     aspectRatio: 0.8,
     borderRadius: 8,
-    backgroundColor: Colors.white,
+    backgroundColor: Colors[theme].componentBackground,
     alignItems: 'center',
     justifyContent: 'space-around',
     marginTop: 0,
@@ -104,6 +106,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     marginTop: -45,
+    color: Colors[theme].title,
   },
   description: {
     maxWidth: '80%',
@@ -111,10 +114,10 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     textAlign: 'center',
     fontWeight: '700',
-    color: Colors.light.lightText,
+    color: Colors[theme].detailText,
   },
   welcomeButton: {
-    backgroundColor: Colors.light.blue,
+    backgroundColor: Colors.blue,
     padding: 10,
     borderRadius: 6,
     width: '60%',

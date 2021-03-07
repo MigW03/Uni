@@ -1,0 +1,38 @@
+{
+  "Colors": {
+    "light": {
+      "background": "#f1f1f1",
+      "componentBackground": "#fff",
+      "title": "#535353",
+      "detailText": "#7e7e7e",
+      "secondaryText": "#646464",
+      "navText": {
+        "active": "#3473d1",
+        "inactive": "#3473d1a6"
+      },
+      "inactiveSelector": "#b4b4b4",
+      "completedTodoSelector": "#3473d1",
+      "importantTodoText": "#454545",
+      "normalTodoText": "#707070",
+      "headerText": "#3473d1"
+    },
+    "dark": {
+      "background": "#2e2e2e",
+      "componentBackground": "#404040",
+      "title": "#f4f4f4",
+      "detailText": "#acacac",
+      "secondaryText": "#7c7c7c",
+      "navText": {
+        "active": "#fff",
+        "inactive": "#FFFFFF80"
+      },
+      "inactiveSelector": "#b4b4b4",
+      "completedTodoSelector": "#b4b4b4",
+      "importantTodoText": "#f4f4f4",
+      "normalTodoText": "#cccccc",
+      "headerText": "#FFF"
+    },
+    "blue": "#3473d1",
+    "white": "#FFF"
+  }
+}

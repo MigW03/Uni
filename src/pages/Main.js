@@ -8,21 +8,30 @@ import {
   StatusBar,
 } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {Colors} from '../assets/Colors';
+import {Colors} from '../assets/Colors.json';
 
 import TabRoutes from '../tabRoutes';
 import WelcomeModal from '../components/WelcomeModal';
 
+const theme = 'light';
+
 export default function Main({navigation}) {
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="#f1f1f1" barStyle="dark-content" />
+      <StatusBar
+        backgroundColor={Colors[theme].background}
+        barStyle={theme == 'dark' ? 'light-content' : 'dark-content'}
+      />
       <View style={styles.header}>
         <Text style={styles.appName}>Uni</Text>
         <TouchableOpacity
           style={styles.settingsTouch}
           onPress={() => navigation.navigate('Settings')}>
-          <MaterialIcons name="settings" size={40} color={Colors.light.blue} />
+          <MaterialIcons
+            name="settings"
+            size={40}
+            color={Colors[theme].headerText}
+          />
         </TouchableOpacity>
       </View>
       <TabRoutes />
@@ -34,12 +43,12 @@ export default function Main({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.light.background,
+    backgroundColor: Colors[theme].background,
   },
   appName: {
     fontSize: 30,
     fontWeight: 'bold',
-    color: Colors.light.blue,
+    color: Colors[theme].headerText,
   },
   header: {
     height: '12%',
