@@ -20,8 +20,8 @@
       "background": "#2e2e2e",
       "componentBackground": "#404040",
       "title": "#f4f4f4",
-      "detailText": "#acacac",
-      "secondaryText": "#7c7c7c",
+      "detailText": "#7c7c7c",
+      "secondaryText": "#acacac",
       "navText": {
         "active": "#fff",
         "inactive": "#FFFFFF80"
